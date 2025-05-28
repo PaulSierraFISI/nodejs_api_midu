@@ -1,0 +1,32 @@
+### obtener peliculas
+GET http://localhost:3000/movies
+
+###obtener pelicula por ID
+GET http://localhost:3000/movies/1
+
+
+###obtener peliculas en json. Se aceptan valores para filtrar por genero
+GET http://localhost:3000/movies?genre=drama
+
+###Crear un post
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Hola",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": ["Drama"],
+  "rate": 9.3
+}
+
+
+###Actualizar un post
+PATCH http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+Content-Type: application/json
+
+{
+  "title": "Qué pasó ayer"
+}
